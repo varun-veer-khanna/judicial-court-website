@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery.js"></script>
+<script src="slider.js"></script>
+<script>
+	$("#slider").cycle({
+		fx:'shuffle,zoom,fade',
+		next:'#next',
+		prev:'#prev'
+		
+	});
+	/*
+    blindX
+    blindY
+    blindZ
+    cover
+    curtainX
+    curtainY
+    fade
+    fadeZoom
+    growX
+    growY
+    scrollUp
+    scrollDown
+    scrollLeft
+    scrollRight
+    scrollHorz
+    scrollVert
+    shuffle
+    slideX
+    slideY
+    toss
+    turnUp
+    turnDown
+    turnLeft
+    turnRight
+    uncover
+    wipe
+    zoom
+*/
+</script>
+</head>
+<style>
+	#hero{
+		height:300px;
+		width:900px;
+		position:relative;
+		margin:50px auto;
+	}
+	#next{
+		height:50px;
+		width:50px;
+		background-color:rgba(183,0,3, .3);
+		line-height:50px;
+		text-align:center;
+		right:0;
+		position:absolute;
+		top:125px;
+		z-index:99;
+		opacity:.3;	
+		cursor:pointer;
+	}
+	#prev{
+		height:50px;
+		width:50px;
+		background-color:rgba(183,0,3, .3);
+		line-height:50px;
+		text-align:center;
+		left:0;
+		position:absolute;
+		top:125px;
+		z-index:99;
+		opacity:.3;	
+		cursor:pointer;
+	}
+	#slider{
+		height:300px;
+		width:900px;
+		position:absolute;
+		overflow:hidden;
+	}
+	#hero:hover #next{
+		opacity:1;
+	}
+	#hero:hover #prev{
+		opacity:1;
+	}
+</style>
+<body>
+	<div id="hero">
+    	<div id="next">&rang;</div>
+        <div id="prev">&lang;</div>
+        <div id="slider">
+        	<img src="1.jpg" />
+        	<img src="2.jpg" />
+        	<img src="3.jpg" />
+        </div>
+    </div>
+</body>
+</html>
